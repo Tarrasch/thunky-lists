@@ -1,5 +1,4 @@
 
-
 public class CommonLazyLists {
     static public LazyList enumFrom(final int start){
         Thunk<LazyList> delayedTail = new Thunk<LazyList>() {
@@ -31,7 +30,7 @@ public class CommonLazyLists {
             return rest.eval();
         }
         else{ // Do include the element
-            return new LazyList(elem, rest);
+            return new LazyList(elem, rest); // Note the resemblance to cons
         }
     }
 
